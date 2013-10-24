@@ -2,7 +2,7 @@
 	"name": "dotink/flourish-cryptography",
 	"description": "A usable wrapper for cryptographic functions",
 	"keywords": ["cryptography", "encryption"],
-	"license": "AGPL 3.0",
+	"license": "AGPL-3.0",
 	"type": "opus-package",
 	"authors": [
 		{
