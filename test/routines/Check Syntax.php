@@ -17,7 +17,7 @@
 			 */
 			'Checking all PHP Files (.php)' => function($data, $shared)
 			{
-				$dir       = new RecursiveDirectoryIterator(getcwd());
+				$dir       = new RecursiveDirectoryIterator($data['root'] . '/src');
 				$ite       = new RecursiveIteratorIterator($dir);
 				$files     = new RegexIterator($ite, '#(?:.*)\.php$#', RegexIterator::GET_MATCH);
 				$file_list = array();
