@@ -7,13 +7,16 @@
 	return [
 		'setup' => function($data, $shared) {
 			needs($data['root'] . '/src/Cryptography.php');
+			needs($data['root'] . '/test/shims/Exception.php');
 
 			$shared->supportFolder = implode(DS, [
 				$data['root'],
-				'tests',
+				'test',
 				'support',
 				'cryptography'
 			]);
+
+			$shared->coverageEngine->ignoreNamespace('Dotink\Parody(\(.*))?');
 
 			Mime::define('Dotink\Flourish\Core');
 
